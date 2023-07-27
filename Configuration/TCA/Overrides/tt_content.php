@@ -1,0 +1,43 @@
+<?php
+defined('TYPO3') or die();
+
+/**
+ * Add new select group for list_type
+ */
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItemGroup(
+    'tt_content',
+    'list_type',
+    'nsNewsAuthor',
+    'LLL:EXT:ns_news_author/Resources/Private/Language/locallang.xlf:tx_newsauthor_domain_model_newsauthor',
+    'after:default'
+);
+
+/**
+ * Array with available plugins
+ */
+$plugins = [
+    'list',
+    'show',
+];
+
+/**
+ * Register Plugins
+ */
+foreach ($plugins as $plugin) {
+    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+        'ns_news_author',
+        ucfirst($plugin),
+        'LLL:EXT:ns_news_author/Resources/Private/Language/locallang.xlf:plugin.' . $plugin . '.title',
+        'EXT:ns_news_author/Resources/Public/Icons/tx_nsnewsauthor_domain_model_newsauthor.svg',
+        'nsNewsAuthor'
+    );
+
+    // add flexform
+    $pluginSignature = 'nsnewsauthor_' . $plugin;
+    $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$pluginSignature] = 'pi_flexform';
+
+    TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
+        $pluginSignature,
+        'FILE:EXT:ns_news_author/Configuration/FlexForms/' . ucfirst($plugin) . '.xml'
+    );
+}

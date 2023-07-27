@@ -1,0 +1,37 @@
+{
+    "name": "nitsan/ns-news-author",
+    "type": "typo3-cms-extension",
+    "description": "Fork of EXT:md_news_author with TYPO3 v12 + Improvement",
+    "license": "GPL-2.0-or-later",
+    "keywords": [
+        "TYPO3", 
+        "TYPO3 CMS", 
+        "extension", 
+        "author", 
+        "news author", 
+        "news", 
+        "tx_news", 
+        "blog author"
+    ],
+    "homepage": "http://www.nitsantech.com",
+    "authors": [
+        {
+            "name": "Navdeep Jethwa",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^12.0",
+        "georgringer/news": "^11.0"
+    },
+    "extra": {
+      "typo3/cms": {
+         "extension-key": "ns_news_author"
+      }
+   },
+    "autoload": {
+        "psr-4": {
+           "NITSAN\\NsNewsAuthor\\": "Classes/"
+        }
+    }
+}
