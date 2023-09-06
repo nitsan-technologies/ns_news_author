@@ -6,7 +6,7 @@ $tmp_news_author_columns = [
 
     'news_author' => [
         'exclude' => 1,
-        'label' => 'LLL:EXT:ns_news_author/Resources/Private/Language/locallang_db.xlf:tx_mdnewsauthor_domain_model_newsauthor',
+        'label' => 'LLL:EXT:ns_news_author/Resources/Private/Language/locallang_db.xlf:tx_nsnewsauthor_domain_model_newsauthor',
         'config' => [
             'type' => 'select',
             'renderType' => 'selectMultipleSideBySide',
@@ -31,5 +31,5 @@ $tmp_news_author_columns = [
 
 TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
     'tx_news_domain_model_news',
-    '--div--;LLL:EXT:ns_news_author/Resources/Private/Language/locallang_db.xlf:tx_mdnewsauthor_domain_model_newsauthor.news_author_tab,news_author'
+    '--div--;LLL:EXT:ns_news_author/Resources/Private/Language/locallang_db.xlf:tx_nsnewsauthor_domain_model_newsauthor.news_author_tab,news_author'
 );
