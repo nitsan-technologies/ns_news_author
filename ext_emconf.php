@@ -5,12 +5,12 @@
  ***************************************************************/
 
 $EM_CONF['ns_news_author'] = [
-    'title' => '[NITSAN[ News Author',
-    'description' => 'Fork of EXT:md_news_author with TYPO3 v12 + Improvement',
+    'title' => 'News Author for TYPO3',
+    'description' => 'A modern fork of EXT:md_news_author, fully compatible with TYPO3 v12. Adds author management and associations for the TYPO3 News extension, improved with clean UI and better performance.',
     'category' => 'plugin',
-    'author' => 'T3: Navdeep Jethwa',
-    'author_email' => 'info@nitsantech.com',
-    'author_company' => 'NITSAN Technologies Pvt Ltd',
+    'author' => 'Team T3Planet',
+    'author_email' => 'info@t3planet.de',
+    'author_company' => 'T3Planet',
     'state' => 'stable',
     'internal' => '',
     'uploadfolder' => '0',
